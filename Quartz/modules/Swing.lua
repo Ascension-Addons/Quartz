@@ -116,11 +116,8 @@ function Swing:OnEnable()
 	self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 	
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
-	-- slam stuff
-	if playerclass == "WARRIOR" then
-		self:RegisterEvent("UNIT_SPELLCAST_START")
-		self:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED")
-	end
+	self:RegisterEvent("UNIT_SPELLCAST_START")
+	self:RegisterEvent("UNIT_SPELLCAST_INTERRUPTED")
 	
 	self:RegisterEvent("UNIT_ATTACK")
 	if not swingbar then
